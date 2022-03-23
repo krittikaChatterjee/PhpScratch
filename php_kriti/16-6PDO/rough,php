@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+    <?php
+
+$con = new PDO('mysql:host=localhost;dbname=TestDB','root';'');
+if ($con->errorCode()) die ($con->errorInfo());
+else{
+   $sql= " select * from users";
+    $stmt = $con->prepare($SQL);
+   print_r($stmt);
+ $con = NULL;
+
+
+
+    ?>
+</body>
+</html>
